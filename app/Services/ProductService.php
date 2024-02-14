@@ -23,7 +23,7 @@ class ProductService
         return $productCollection['total'];
     }
 
-    public function sentProduct($data): bool
+    public function sentProduct(array $data): bool
     {
         $this->productRepository->addProductWithImages($data);
         return $this->loadService->addProduct($data);
